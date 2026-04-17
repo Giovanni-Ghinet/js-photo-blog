@@ -1,0 +1,46 @@
+.titolo-immagine {
+    font-family: "Sometype Mono", monospace;
+}
+
+.data {
+    font-family: "Sometype Mono", monospace;
+}
+
+body{
+    background-image: url('../imgs/cork.png');
+}
+
+.img-placeholder{
+    background-color: #f0f0f0;
+    width: 100%;
+    aspect-ratio: 1;
+    
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.max-dimensione{
+    max-width: 350px;
+}
+
+.titolo{
+    background-image: url('../imgs/wall.png');
+    font-family: "Edu TAS Beginner", sans-serif;
+}
+
+.dimensione-titolo{
+    font-size: 6rem;
+    padding: 10px 0 20px 0;
+}
+
+.custom-card {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.custom-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
