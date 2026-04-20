@@ -50,7 +50,7 @@ function renderCards(posts) {
 
 
 
-function apriModale(src, alt, caption) {
+function apriModale(src, alt) {
     const modal = document.querySelector('#imageModal');
     const modalImg = document.querySelector('#modalImage');
     
@@ -77,8 +77,12 @@ function chiudiModale() {
 document.addEventListener('DOMContentLoaded', () => {    // domcontentloaded lo interpreta il browser quando il dom è caricato
     const modal = document.querySelector('#imageModal');
 
-    const closeBtn = modal.querySelector('.modal-close'); // Chiudi cliccando sulla X
-    closeBtn.addEventListener('click', chiudiModale);
+    if (modal) {  // Aggiungi controllo!
+        const closeBtn = modal.querySelector('.modal-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', chiudiModale);
+        }
+    }
 });
 
 
@@ -116,9 +120,9 @@ const inputNone = document.querySelector('.card-inpunt');
 
 if (immagineInputElem !== null && immagineThumbnailElem !== null) {
     immagineInputElem.addEventListener('change', (event) => {
-    if (immagineInputElem.files !== null &&
-        immagineInputElem.files.length > 0) {
+    if (immagineInputElem.files !== null && immagineInputElem.files.length > 0) {
         const image = immagineInputElem.files[0];
+
         const imageUrl = URL.createObjectURL(image);
         immagineThumbnailElem.src = imageUrl;
 

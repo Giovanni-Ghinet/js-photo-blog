@@ -59,10 +59,10 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: rotate(6deg);
     transition: 0.3s ease;
+}
 
-    .pin-img {
-        display: none;
-    }
+.custom-card:hover .pin-img {
+    display: none;
 }
 
 
@@ -96,13 +96,6 @@ body {
     object-fit: contain;
     border-radius: 4px;
 
-}
-
-.modal-caption {
-    color: white;
-    margin-top: 15px;
-    font-size: 3rem;
-    font-weight: 600;
 }
 
 .modal-close {

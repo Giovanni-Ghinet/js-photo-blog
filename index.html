@@ -32,40 +32,43 @@
 
         </div>
 
-        <div class="mt-3 ms-5">
-        <input type="file" id="immagine-in">
-        <div class="col-12 col-sm-6 col-lg-4 mx-auto d-none card-inpunt">
-            <div class="card rounded-0 h-100 max-dimensione mx-auto custom-card">
-                <div class="card-body">
-                    <img class="position-absolute top-0 start-50 translate-middle pin-img" src="./imgs/pin.svg" alt="puntina che tiene l'immagine">
+        <!-- input file personale -->
 
-                    <div class="position-relative immagine-container" data-id="${post.id}">
-                        <div class="img-dimensione"> 
-                            <img id="immagine-thumbnail" src="" alt="">
+        <div class="mt-3 ms-5">
+            <input type="file" id="immagine-in">
+            <div class="col-12 col-sm-6 col-lg-4 mx-auto d-none card-inpunt">
+                <div class="card rounded-0 h-100 max-dimensione mx-auto custom-card">
+                    <div class="card-body">
+                        <img class="position-absolute top-0 start-50 translate-middle pin-img" src="./imgs/pin.svg"
+                            alt="puntina che tiene l'immagine">
+
+                        <div class="position-relative immagine-container" data-id="${post.id}">
+                            <div class="img-dimensione">
+                                <img id="immagine-thumbnail" src="" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>    
-        
+
     </div>
 
-    
+
 
     <!-- modale per ingrandire immagine -->
-   
+
     <div id="imageModal" class="modal-overlay d-none">
         <div>
             <div class="modal-content">
                 <button class="modal-close">&times;</button>
                 <img id="modalImage" src="" alt="" class="modal-image">
-                
+
             </div>
         </div>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
