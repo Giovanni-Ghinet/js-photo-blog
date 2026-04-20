@@ -55,7 +55,7 @@ function apriModale(src, alt, caption) {
     const modalImg = document.querySelector('#modalImage');
     
 
-    if (modal && modalImg) { // Controlla che modal, modalImg e modalCaption non siano null, undefined, false, 0 o stringa vuota
+    if (modal && modalImg) { // Controlla che modal, modalImg non siano null, undefined, false, 0 o stringa vuota
         modalImg.src = src;
         modalImg.alt = alt;
        
@@ -110,3 +110,19 @@ if (caricamentoMessaggio !== null && erroreMessaggio !== null) {
 }
 
 
+const immagineInputElem = document.querySelector('#immagine-in');
+const immagineThumbnailElem = document.querySelector('#immagine-thumbnail');
+const inputNone = document.querySelector('.card-inpunt');
+
+if (immagineInputElem !== null && immagineThumbnailElem !== null) {
+    immagineInputElem.addEventListener('change', (event) => {
+    if (immagineInputElem.files !== null &&
+        immagineInputElem.files.length > 0) {
+        const image = immagineInputElem.files[0];
+        const imageUrl = URL.createObjectURL(image);
+        immagineThumbnailElem.src = imageUrl;
+
+        inputNone.classList.remove('d-none');
+    }
+    });
+}

@@ -31,7 +31,27 @@
         <div class="row g-4 card-html mt-4">
 
         </div>
+
+        <div class="mt-3 ms-5">
+        <input type="file" id="immagine-in">
+        <div class="col-12 col-sm-6 col-lg-4 mx-auto d-none card-inpunt">
+            <div class="card rounded-0 h-100 max-dimensione mx-auto custom-card">
+                <div class="card-body">
+                    <img class="position-absolute top-0 start-50 translate-middle pin-img" src="./imgs/pin.svg" alt="puntina che tiene l'immagine">
+
+                    <div class="position-relative immagine-container" data-id="${post.id}">
+                        <div class="img-dimensione"> 
+                            <img id="immagine-thumbnail" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>    
+        
     </div>
+
+    
 
     <!-- modale per ingrandire immagine -->
    
